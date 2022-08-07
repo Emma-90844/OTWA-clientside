@@ -1,0 +1,61 @@
+.navbar{
+    height: 50px;
+    /* background-color: #003580; */
+    background-color: #3DB83A;
+    display: flex;
+    justify-content: center;
+}
+.navContainer{
+    width: 100%;
+    /* background-color: #ff0000; */
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: 900;
+    font-size: 30px;
+    font-family: 'Gotham Rounded', sans-serif;
+    color: rgb(193, 244, 12);                                            
+}
+.logo-text{
+    font-size: 12px;
+}
+.navButton{
+    margin-left: 20px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #003580;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

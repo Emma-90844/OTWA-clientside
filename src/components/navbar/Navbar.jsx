@@ -8,6 +8,7 @@ const Navbar = () => {
             <span className='logo'>OTWA <span className='logo-text'>UG</span></span>
             
             <div className="navItems">
+              
                 <button className="navButton">Register</button>
                 <button className="navButton">Login</button>
             </div>
@@ -18,3 +19,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

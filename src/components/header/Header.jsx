@@ -13,10 +13,12 @@ import { useState } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 function Header({ type }) {
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
+  const [destination, setDestination] = useState("")
 
   const [options, setOptions] = useState({
     adult: 1,
@@ -41,10 +43,14 @@ function Header({ type }) {
       };
     });
   };
-
+// handleSearch
+const navigate = useNavigate()
+const handleSearch  = () => {
+  navigate('/hotels', {state: {destination,date,options}})
+}
   return (
     <div className="header">
-      <div className="headerContainer">
+      <div className={type === 'list' ? 'headerContainer listMode' : 'headerContainer'}>
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -91,6 +97,7 @@ function Header({ type }) {
                   type="text"
                   placeholder="Where are you going"
                   className="headerSearchInput"
+                  onChange={e => setDestination(e.target.value)}
                 />
               </div>
 
@@ -199,7 +206,7 @@ function Header({ type }) {
               </div>
 
               <div className="headerSearchItem">
-                <div className="headerBtn">Search</div>
+                <button onClick={handleSearch} className="headerBtn">Search</button>
               </div>
             </div>
           </>

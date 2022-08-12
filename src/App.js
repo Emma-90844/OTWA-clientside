@@ -1,14 +1,9 @@
 import "./App.css";
 
 import {
-  BrowserRouter as Router,
-  Routes,
-  // Switch,
-  Route,
-  // Link,
-  // useRouteMatch,
-  // useParams,
   BrowserRouter,
+  Routes,
+  Route,
 } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import List from "./pages/list/List";

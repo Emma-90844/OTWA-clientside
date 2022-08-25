@@ -43,3 +43,13 @@
   border: none;
   outline: none;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-device-width: 425px) 
+{
+  .mail {
+  width: 592px;
+
+ }
+}
+

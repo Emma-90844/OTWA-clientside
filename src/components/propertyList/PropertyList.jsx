@@ -60,7 +60,7 @@ const PropertyList = () => {
 
       
       {/* item 3 */}
-      <div className="pListItem">
+      {/* <div className="pListItem">
         <img
           src="https://spectrumproperties.co.ug/wp-content/uploads/2020/04/Rental-houses-for-rent-Kung-Kampala-Uganda-4.jpeg"
           alt=""
@@ -70,7 +70,7 @@ const PropertyList = () => {
           <h1>Hotels</h1>
           <h2>233 Hotels</h2>
         </div>
-      </div>
+      </div> */}
      
      
 

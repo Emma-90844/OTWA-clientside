@@ -1,4 +1,5 @@
 
+
 .homeContainer{
   margin-top: 50px;
   display: flex;
@@ -10,6 +11,27 @@
 .homeTitle{
   width: 1024px;
   font-size: 20px;
+  /* background-color: red; */
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-device-width: 425px) 
+/* and (min-device-width: 640px)  */
+/* and (-webkit-device-pixel-ratio: 2)  */
+{
+
+ .homeContainer{
+  width: 592px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+ }
+ .homeTitle{
+  width: 592px;
+  font-size: 30px;
+ }
+
 }
 
 

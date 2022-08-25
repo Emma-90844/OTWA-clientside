@@ -1,58 +1,55 @@
-.navbar{
-    height: 50px;
-    /* background-color: #003580; */
-    background-color: #3DB83A;
-    display: flex;
-    justify-content: center;
+.navbar {
+  height: 50px;
+  background-color: #3db83a;
+  display: flex;
+  justify-content: center;
 }
-.navButton{
-    background-color: red;
+.navButton {
+  /* background-color: red; */
 }
-.navContainer{
-    width: 100%;
-    max-width: 1024px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo{
-    font-weight: 900;
-    font-size: 30px;
-    font-family: 'Gotham Rounded', sans-serif;
-    color: rgb(193, 244, 12);  
-    cursor: pointer;                                          
+.logo {
+  font-weight: 900;
+  font-size: 30px;
+  font-family: "Gotham Rounded", sans-serif;
+  color: rgb(193, 244, 12);
+  cursor: pointer;
 }
-.logo-text{
-    font-size: 12px;
+.logo-text {
+  font-size: 12px;
 }
-.navButton{
-    margin-left: 20px;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    color: #003580;
-
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
 }
-
 
 /* CSS */
 .navButton {
   background-color: #e1ecf4;
   border-radius: 3px;
   border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
   box-sizing: border-box;
   color: #39739d;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham Rounded', sans-serif;
+  font-family: "Gotham Rounded", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.15385;
   margin: 0;
   outline: none;
-  padding: 8px .8em;
+  padding: 8px 0.8em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -70,7 +67,7 @@
 }
 
 .button-8:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
 .button-8:active {
@@ -78,7 +75,6 @@
   box-shadow: none;
   color: #2c5777;
 }
-
 
 /* CSS */
 .navB {
@@ -90,7 +86,11 @@
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
   background: #ad5389;
-  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(20, 167, 62, 1) 0%,
+    rgba(102, 247, 113, 1) 100%
+  );
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
   letter-spacing: 0.05em;
@@ -114,20 +114,25 @@
 
 
 
+/* MEDIA QUERIES */
+@media only screen and (max-device-width: 425px) 
+/* and (min-device-width: 640px)  */
+/* and (-webkit-device-pixel-ratio: 2)  */
+{
+ .navbar{
+  width: 592px;
+  height: 80px;
+  /* overflow: hidden; */
 
+ }
+ .logo {
+  padding-left: 25px;
+}
+.navItems{
+  display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

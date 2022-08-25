@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 function Header({ type }) {
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
-  const [destination, setDestination] = useState("")
+  const [destination, setDestination] = useState("");
 
   const [options, setOptions] = useState({
     adult: 1,
@@ -43,14 +43,18 @@ function Header({ type }) {
       };
     });
   };
-// handleSearch
-const navigate = useNavigate()
-const handleSearch  = () => {
-  navigate('/hotels', {state: {destination,date,options}})
-}
+  // handleSearch
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    navigate("/hotels", { state: { destination, date, options } });
+  };
   return (
     <div className="header">
-      <div className={type === 'list' ? 'headerContainer listMode' : 'headerContainer'}>
+      <div
+        className={
+          type === "list" ? "headerContainer listMode" : "headerContainer"
+        }
+      >
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -59,22 +63,22 @@ const handleSearch  = () => {
 
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
+            <span className="serviceSpan">Flights</span>
           </div>
 
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <span>Car Rentals</span>
+            <span className="serviceSpan">Car Rentals</span>
           </div>
 
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <span>Attractions</span>
+            <span className="serviceSpan">Attractions</span>
           </div>
 
           <div className="headerListItem">
             <FontAwesomeIcon icon={faTaxi} />
-            <span>Airport Taxis</span>
+            <span className="serviceSpan">Airport Taxis</span>
           </div>
         </div>
 
@@ -82,12 +86,14 @@ const handleSearch  = () => {
         {type !== "list" && (
           <>
             {/* header title */}
-            <h1 className="headerTitle">Apartments and houses for rent</h1>
+            <h1 className="headerTitle">Find Apartments and Houses for Rent</h1>
             <p className="headerDesc">
-              Are you looking for your new rental property? Then you've come to
-              the right place.{" "}
+              Are you looking for your new rental property?{" "}
             </p>
-            <button className="headerBtn"> Sign in / Register</button>
+            <button className="headerBtn sRegisterBtn">
+              {" "}
+              Sign in / Register
+            </button>
 
             {/*filter  Search inputs  */}
             <div className="headerSearch">
@@ -97,7 +103,7 @@ const handleSearch  = () => {
                   type="text"
                   placeholder="Where are you going"
                   className="headerSearchInput"
-                  onChange={e => setDestination(e.target.value)}
+                  onChange={(e) => setDestination(e.target.value)}
                 />
               </div>
 
@@ -130,7 +136,7 @@ const handleSearch  = () => {
                   className="headerSearchText"
                 >{`${options.adult} adult . ${options.children} children . ${options.room} room `}</span>
 
-                {/* options slect for the filter bar  */}
+                {/* options select for the filter bar  */}
                 {openOptions && (
                   <div className="options">
                     {/* item 1 */}
@@ -206,7 +212,9 @@ const handleSearch  = () => {
               </div>
 
               <div className="headerSearchItem">
-                <button onClick={handleSearch} className="headerBtn">Search</button>
+                <button onClick={handleSearch} className="headerBtn">
+                  Search
+                </button>
               </div>
             </div>
           </>
